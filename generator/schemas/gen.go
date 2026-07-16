@@ -229,7 +229,7 @@ This is not the case in the "%s' API group:
 			parser.NeedFlattenedSchemaFor(typeIdent)
 			currentJSONSchema, found := parser.FlattenedSchemata[typeIdent]
 			if !found {
-				root.AddError(fmt.Errorf("Json schema for type " + typeIdent.Package.Name + "/" + typeIdent.Name + " could not be generated"))
+				root.AddError(fmt.Errorf("Json schema for type %s/%s could not be generated", typeIdent.Package.Name, typeIdent.Name))
 				continue
 			}
 
